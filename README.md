@@ -8,13 +8,13 @@ The official JavaScript SDK for [DuckBug.io](https://duckbug.io) - a flexible lo
 
 ```bash
 # npm
-npm install @duckbug/react
+npm install duckbug-react
 
 # yarn
-yarn add @duckbug/react
+yarn add duckbug-react
 
 # pnpm
-pnpm add @duckbug/react
+pnpm add duckbug-react
 ```
 ## Quick Start
 
