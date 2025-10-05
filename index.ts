@@ -1,1 +1,1 @@
-export { DuckBugWrapper, useDuckBug } from './src/DuckBugWrapper'
+export { DuckBugWrapper, DuckBugProvider, useDuckBug } from './src/DuckBugWrapper'

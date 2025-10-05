@@ -3,15 +3,13 @@ import {  DuckBugProvider, DuckSDK, LogProviderConfig } from '@duckbug/js';
 
 type Props = {
     children: React.ReactNode
-    dsn: string
+    providers: DuckBugProvider[]
     config?: LogProviderConfig
 }
 
 let duck: DuckSDK | null = null;
 
-export const DuckBugWrapper = ({children, dsn, config}: Props) => {
-
-  const providers = [new DuckBugProvider({ dsn: dsn })];
+export const DuckBugWrapper = ({children, config, providers}: Props) => {
   duck = new DuckSDK(providers, config);
 
   window.onerror = (message, source, error) => {
@@ -31,10 +29,11 @@ export const DuckBugWrapper = ({children, dsn, config}: Props) => {
   )
 }
 
-
 export const useDuckBug = () => {
   if (!duck) {
     throw new Error('DuckBug not initialized. Use DuckBugWrapper first.');
   }
   return duck;
 }
+
+export { DuckBugProvider }
