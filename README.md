@@ -1,4 +1,4 @@
-# @duckbug/js-react
+# duckbug-react
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -21,10 +21,16 @@ pnpm add duckbug-react
 ### Basic Usage
 
 ```typescript
-import { DuckBugWrapper } from '@duckbug/react'; 
+import { DuckBugWrapper, DuckBugProvider } from 'duckbug-react'; 
 
 // Paste your dsn from DuckBug
 const dsn = 'your-duckbug-dsn-here'
+
+const providers = [
+  new DuckBugProvider({ dsn: dsn }),
+  new MyCustomProvider({ /* your config */ }),
+  // add more providers as needed
+];
 
 // Create SDK instance with optional configuration
 // You can configure the configuration as you want.
@@ -38,7 +44,7 @@ logReports: {
 };
   
 // Start logging
-<DuckBugWrapper dsn={dsn} config={config}>
+<DuckBugWrapper providers={providers} config={config}>
     <YourApp />
 </DuckBugWrapper>
 
@@ -49,7 +55,7 @@ logReports: {
 You can also catch errors them yourself and log them
 
 ```typescript
-import { useDuckBug } from '@duckbug/react';
+import { useDuckBug } from 'duckbug-react';
 
 //Get your DuckSDK
 const duck = useDuckBug()
