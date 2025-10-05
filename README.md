@@ -26,7 +26,11 @@ import { DuckBugWrapper, DuckBugProvider } from 'duckbug-react';
 // Paste your dsn from DuckBug
 const dsn = 'your-duckbug-dsn-here'
 
-const providers = [new DuckBugProvider({dsn: dsn})]
+const providers = [
+  new DuckBugProvider({ dsn: dsn }),
+  new MyCustomProvider({ /* your config */ }),
+  // add more providers as needed
+];
 
 // Create SDK instance with optional configuration
 // You can configure the configuration as you want.
