@@ -1,5 +1,5 @@
 {
-  "name": "duckbug-react",
+  "name": "@duckbug/js-react",
   "version": "1.0.2",
   "description": "React SDK for DuckBug error tracking",
   "main": "./dist/index.umd.js",
@@ -20,7 +20,7 @@
     "sdk",
     "error-tracking"
   ],
-  "author": "Your Name",
+  "author": "Evgeniy Dolgov",
   "license": "MIT",
   "scripts": {
     "build": "vite build",

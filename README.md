@@ -8,23 +8,25 @@ The official JavaScript SDK for [DuckBug.io](https://duckbug.io) - a flexible lo
 
 ```bash
 # npm
-npm install @duckbug/react
+npm install @duckbug/js-react
 
 # yarn
-yarn add @duckbug/react
+yarn add @duckbug/js-react
 
 # pnpm
-pnpm add @duckbug/react
+pnpm add @duckbug/js-react
 ```
 ## Quick Start
 
 ### Basic Usage
 
 ```typescript
-import { DuckBugWrapper } from '@duckbug/react'; 
+import { DuckBugWrapper, DuckBugProvider } from '@duckbug/js-react'; 
 
 // Paste your dsn from DuckBug
 const dsn = 'your-duckbug-dsn-here'
+
+const providers = [new DuckBugProvider({dsn: dsn})]
 
 // Create SDK instance with optional configuration
 // You can configure the configuration as you want.
@@ -38,7 +40,7 @@ logReports: {
 };
   
 // Start logging
-<DuckBugWrapper dsn={dsn} config={config}>
+<DuckBugWrapper providers={providers} config={config}>
     <YourApp />
 </DuckBugWrapper>
 
@@ -49,7 +51,7 @@ logReports: {
 You can also catch errors them yourself and log them
 
 ```typescript
-import { useDuckBug } from '@duckbug/react';
+import { useDuckBug } from '@duckbug/js-react';
 
 //Get your DuckSDK
 const duck = useDuckBug()
