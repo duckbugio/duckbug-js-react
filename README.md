@@ -1,4 +1,4 @@
-# @duckbug/js-react
+# duckbug-react
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -8,20 +8,20 @@ The official JavaScript SDK for [DuckBug.io](https://duckbug.io) - a flexible lo
 
 ```bash
 # npm
-npm install @duckbug/js-react
+npm install duckbug-react
 
 # yarn
-yarn add @duckbug/js-react
+yarn add duckbug-react
 
 # pnpm
-pnpm add @duckbug/js-react
+pnpm add duckbug-react
 ```
 ## Quick Start
 
 ### Basic Usage
 
 ```typescript
-import { DuckBugWrapper, DuckBugProvider } from '@duckbug/js-react'; 
+import { DuckBugWrapper, DuckBugProvider } from 'duckbug-react'; 
 
 // Paste your dsn from DuckBug
 const dsn = 'your-duckbug-dsn-here'
@@ -51,7 +51,7 @@ logReports: {
 You can also catch errors them yourself and log them
 
 ```typescript
-import { useDuckBug } from '@duckbug/js-react';
+import { useDuckBug } from 'duckbug-react';
 
 //Get your DuckSDK
 const duck = useDuckBug()

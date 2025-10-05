@@ -1,6 +1,6 @@
 {
-  "name": "@duckbug/js-react",
-  "version": "1.0.2",
+  "name": "duckbug-react",
+  "version": "1.0.3",
   "description": "React SDK for DuckBug error tracking",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.es.js",
